@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'WaterGalon';
+    src: url(./fonts/Water\ Galon.otf);
+}
+
+/* Main body styling */
+#body1 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Overlay container that holds everything */
+.overlay-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Background layer */
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FAD2E1;
+    background-image: url("./assets/splashscreen.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Behind the button */
+}
+
+/* Button container - positioned over background */
+.center-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Above the background */
+}
+
+/* Image Button Styles */
+.image-button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.image-button img {
+    display: block;
+    width: 310px;
+    height: auto;
+}
+
+/* Hover effect for button */
+.image-button .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-button:hover .hover-img {
+    opacity: 1;
+}
+
+/* Rest of your existing styles */
+#info {
+    font-family:'WaterGalon';
+    color:white
+}
+
+#body3 {
+    background-color:white ;
+    background-image: url('https://i.pinimg.com/736x/e0/6a/aa/e06aaac89794562ee1babb32f379d80e.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+#body2 {
+  background-image: url('./assets/house.svg');
+  background-size: cover;        /* Scales image to cover entire element */
+  background-repeat: no-repeat;  /* Prevents image repetition */
+  background-position: center;   /* Centers the background */
+  min-height: 100vh;            /* Ensures body takes full viewport height */
+}
+
+
+.letter {
+    width: 500px;
+    min-height: 300px;
+    margin: 60px auto;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+#top {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-family: "Monda";
+    font-size: 1em;
+}
+
+#middle{
+    font-size: 14px;
+    font-family: "Monda";
+}
+
+#bottom{
+    font-size: 14px;
+    text-align: right;
+    font-family: "Monda";
+}
+
+.monda-Monda {
+    font-family: "Monda", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.walking-duck {
+  position: absolute;
+  bottom: 15%; /* Adjust this value to match mailbox level */
+  width: 155px;
+  height: auto;
+  animation: walkAcross 15s linear infinite;
+}
+@keyframes walkAcross {
+  0% {
+    left: 3%; /* Start off-screen left */
+    transform: scaleX(1); /* Facing right */
+  }
+  50% {
+    left: calc(100% + 100px); /* Exit off-screen right */
+    transform: scaleX(1);
+  }
+  
+ 
+}
